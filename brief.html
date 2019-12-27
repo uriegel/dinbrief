@@ -1,12 +1,6 @@
 <html lang="de-DE">
     <header>
         <style>
-            @media print {
-                /* div.footer {
-                    position: fixed;
-                    bottom: 0;
-                } */
-            }            
             @page {
                 size: A4;
                 margin: 18mm;        
@@ -14,8 +8,52 @@
             }           
             body {
                 font-family: Arial, Helvetica, sans-serif;
+                font-size: 85%;
+                padding: 0px;
+                margin: 0px;
             }
-
+            #logo {
+                position: absolute;
+                top: 0cm;
+                left: 27mm;                
+                font-size: xx-large;
+            }
+            #sender-klein {
+                position: absolute;
+                top: 30mm;
+                left: 27mm;     
+                
+                border-bottom-color: gray;
+                border-bottom-width: 1px;
+                border-bottom-style: solid;
+            }
+            #sender-klein > div {
+                font-size: xx-small;
+                display: inline-block;
+            }
+            .leer {
+                width: 1cm;
+                display: inline-block;
+            }
+            #empfänger {
+                position: absolute;
+                bottom: 192mm;
+                left: 27mm;     
+            }
+            #absender {
+                position: absolute;
+                text-align: right; 
+                top: 0cm;
+                right: 0cm;      
+                font-size: smaller;          
+            }
+            #datum {
+                position: absolute;
+                text-align: right; 
+                top: 4cm;
+                right: 0cm;      
+                font-size: smaller;          
+            }
             #falz {
                 position: absolute;
                 top: 86mm; 
@@ -25,7 +63,7 @@
                 border-top-width: 1px;
             }
             #body {
-                margin-left: 25mm;
+                margin-left: 27mm;
                 margin-top: 92mm;
                 text-align: justify;
                 hyphens: auto;
@@ -34,192 +72,47 @@
                 font-weight: bold;
                 margin-bottom: 2cm;
             }
+            #unterschrift {
+                margin-top: 25mm;
+                font-size: small;
+            }
         </style>
     </header>
     <body>
+        <div id="logo">Dipl.-Ing. Uwe Riegel</div>    
+        <div id="sender-klein">
+            <div class="leer"></div>
+            <div>Uwe Riegel &bull; Cyriakusstraße 3 &bull; 50169 Kerpen</div>
+            <div class="leer"></div>
+        </div>
+        <div id="empfänger">
+            <div>Firma Klein</div>
+            <div>Kleinstr.45</div>
+            <div>50169 Kleinhausen</div>
+        </div>
+        <div id="absender">
+            <div>Cyriakusstraße 3</div>
+            <div>50169 Kerpen</div>
+            <div>&phone; +49 2273/3908</div>
+            <div>&#x1F4E7; uriegel@hotmail.de</div>
+        </div>
+        <div id=datum>
+            <script>
+                document.write(new Date().toLocaleDateString("de-DE", { year: 'numeric', month: 'long', day: 'numeric' })) 
+            </script>
+        </div>
         <div id="falz"></div>    
         <div id="body">
             <p id="subject">Das ist der Betreff</p>
             <p>Sehr geehrte Damen und Herren,</p>
             <p>
-                Dies ist der Text des Briefes. Er ist sehr schön Silbentrennung.  
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
+                Dies ist der Text des Briefes.
             </p>
             <p>
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
+                Mit freundlichen Grüßen
             </p>
-            <p>
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-            </p>
-            <p>
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-            </p>
-            <p>
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-            </p>
-            <p>
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-            </p>
-            <p>
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-            </p>
-            <p>
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-            </p>
-            <p>
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-            </p>
-            <p>
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-            </p>
-            <p>
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-            </p>
-            <p>
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
-                Dies ist der Text des Briefes. Er ist sehr schön. 
+            <p id="unterschrift">
+                Uwe Riegel
             </p>
         </div>
     </body>
